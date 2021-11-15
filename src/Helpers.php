@@ -57,6 +57,15 @@ class Helpers
             return $date_test;
     }
 
+    public static function dateToForm($date_test)
+    {
+        $date = explode('-', $date_test);
+        if(count($date) == 3)
+            return $date[2] . "/" . $date[1] . "/" . $date[0];
+        else
+            return $date_test;
+    }
+
     public static function cpfRandom($mascara = "1") {
         $n1 = rand(0, 9);
         $n2 = rand(0, 9);
