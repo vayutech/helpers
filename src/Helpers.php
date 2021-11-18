@@ -4,9 +4,26 @@ namespace Vayutech;
 
 class Helpers
 {
+
+    public $brazilianScholing = [
+        'FUNDAMENTAL_COMPLETO' => 'Fundamental Completo',
+        'FUNDAMENTAL_INCOMPLETO' => 'Fundamental Incompleto',
+        'MEDIO_COMPLETO' => 'Médio Completo',
+        'MEDIO_INCOMPLETO' => 'Médio Incompleto',
+        'SUPERIOR_COMPLETO' => 'Superior Completo',
+        'SUPERIOR_INCOMPLETO' => 'Superior Incompleto',
+        'POS_GRADUACAO_COMPLETA' => 'Pós-Graduação Completa',
+        'POS_GRADUACAO_INCOMPLETA' => 'Pós-Graduação Incompleta',
+    ];
+
     public function handler()
     {
         echo "HelloWorld";
+    }
+
+    public function getBrazilianScholing($value)
+    {
+        return $this->brasilianScholing[$value];
     }
 
     public static function shortName($name)
