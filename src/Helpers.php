@@ -5,7 +5,8 @@ namespace Vayutech;
 class Helpers
 {
 
-    public $brazilianScholing = [
+    // peguei no site do serasa, ao completar meu perfil
+    public $brazilianSchooling = [
         'FUNDAMENTAL_COMPLETO' => 'Fundamental Completo',
         'FUNDAMENTAL_INCOMPLETO' => 'Fundamental Incompleto',
         'MEDIO_COMPLETO' => 'Médio Completo',
@@ -16,14 +17,24 @@ class Helpers
         'POS_GRADUACAO_INCOMPLETA' => 'Pós-Graduação Incompleta',
     ];
 
-    public function handler()
-    {
-        echo "HelloWorld";
-    }
+    // peguei no site do IBGE
+    // https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18319-cor-ou-raca.html
+    public $brazilianRaces = [
+        'BRANCA' => 'Branca',
+        'PRETA' => 'Preta',
+        'PARDA' => 'Parda',
+        'AMARELA' => 'Amarela',
+        'INDIGENA' => 'Indígena',
+    ];
 
-    public function getBrazilianScholing($value)
+    public function getBrazilianSchooling($value)
     {
         return $this->brasilianScholing[$value];
+    }
+
+    public function getBrazilianRaces($value)
+    {
+        return $this->brazilianRaces[$value];
     }
 
     public static function shortName($name)
