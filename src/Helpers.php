@@ -6,7 +6,7 @@ class Helpers
 {
 
     // peguei no site do serasa, ao completar meu perfil
-    public $brazilianSchooling = [
+    public $brazillianSchooling = [
         'FUNDAMENTAL_COMPLETO' => 'Fundamental Completo',
         'FUNDAMENTAL_INCOMPLETO' => 'Fundamental Incompleto',
         'MEDIO_COMPLETO' => 'Médio Completo',
@@ -19,7 +19,7 @@ class Helpers
 
     // peguei no site do IBGE
     // https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18319-cor-ou-raca.html
-    public $brazilianRaces = [
+    public $brazillianRaces = [
         'BRANCA' => 'Branca',
         'PRETA' => 'Preta',
         'PARDA' => 'Parda',
@@ -27,12 +27,12 @@ class Helpers
         'INDIGENA' => 'Indígena',
     ];
 
-    public function getBrazilianSchooling($value)
+    public function getBrazillianSchooling($value)
     {
         return $this->brasilianScholing[$value];
     }
 
-    public function getBrazilianRaces($value)
+    public function getBrazillianRaces($value)
     {
         return $this->brazilianRaces[$value];
     }
