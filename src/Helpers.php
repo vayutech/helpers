@@ -59,6 +59,16 @@ class Helpers
         return $cpf;
     }
 
+    public static function cnpjNumber($cnpj)
+    {
+        $cnpj = str_replace(['.', '-', ' ', '/'], '', $cnpj);
+        if(!is_numeric($cnpj))
+            $cnpj = null;
+        else
+            $cnpj = str_pad($cpf, 14, '0', STR_PAD_LEFT);
+        return $cpf;
+    }
+
     public static function nameToArray($name)
     {
         $name = trim($name);
