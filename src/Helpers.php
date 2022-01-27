@@ -59,14 +59,19 @@ class Helpers
         return $cpf;
     }
 
+    public static function cpfMasc($cpf)
+    {
+        return substr($cpf, 0, 3) . "." . substr($cpf, 3, 3) . "." . substr($cpf, 6, 3) . "-" . substr($cpf, 9, 2);
+    }
+
     public static function cnpjNumber($cnpj)
     {
         $cnpj = str_replace(['.', '-', ' ', '/'], '', $cnpj);
         if(!is_numeric($cnpj))
             $cnpj = null;
         else
-            $cnpj = str_pad($cpf, 14, '0', STR_PAD_LEFT);
-        return $cpf;
+            $cnpj = str_pad($cnpj, 14, '0', STR_PAD_LEFT);
+        return $cnpj;
     }
 
     public static function nameToArray($name)
