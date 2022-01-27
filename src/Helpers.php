@@ -59,7 +59,7 @@ class Helpers
         return $cpf;
     }
 
-    public static function cpfMasc($cpf)
+    public static function cpfMask($cpf)
     {
         return substr($cpf, 0, 3) . "." . substr($cpf, 3, 3) . "." . substr($cpf, 6, 3) . "-" . substr($cpf, 9, 2);
     }
