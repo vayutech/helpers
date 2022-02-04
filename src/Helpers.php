@@ -74,6 +74,16 @@ class Helpers
         return $cnpj;
     }
 
+    public static function cnpjMask($cnpj)
+    {
+        return 
+            substr($cnpj, 0, 2) . "."
+            . substr($cnpj, 2, 3) . "."
+            . substr($cnpj, 5, 3) . "/"
+            . substr($cnpj, 8, 4) . "-"
+            . substr($cnpj, 12, 2);
+    }
+
     public static function nameToArray($name)
     {
         $name = trim($name);
