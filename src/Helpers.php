@@ -119,6 +119,24 @@ class Helpers
             return $date_test;
     }
 
+    public static function dateTimeToDatabase($date_test)
+    {
+        $date = explode(' ', $date_test);
+        if(count($date) == 2)
+            return self::dateToDatabase($date[0]) . " " . $date[1];
+        else
+            return $date_test;
+    }
+
+    public static function dateTimeToForm($date_test)
+    {
+        $date = explode(' ', $date_test);
+        if(count($date) == 2)
+            return self::dateToForm($date[0]) . " " . $date[1];
+        else
+            return $date_test;
+    }
+
     public static function cpfRandom($mascara = "1") {
         $n1 = rand(0, 9);
         $n2 = rand(0, 9);
