@@ -140,11 +140,11 @@ class Helpers
     public static function shortDateTime($date_test)
     {
         $date = explode(' ', $date_test);
-        $date = $date[0]; 
-        $time = $date[1];
-        $date = explode('-', $date);
-        $_date = $date[2] . "/" . $date[1];
-        $_time = explode(':', $time);
+        $_date = $date[0]; 
+        $_time = $date[1];
+        $_date = explode('-', $_date);
+        $_date = $_date[2] . "/" . $_date[1];
+        $_time = explode(':', $_time);
         $_time = $_time[0] . ":" . $_time[1];
         return $_date . " " . $_time;
     }
