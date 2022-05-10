@@ -137,6 +137,18 @@ class Helpers
             return $date_test;
     }
 
+    public static function shortDateTime($date_test)
+    {
+        $date = explode(' ', $date_test);
+        $date = $date[0]; 
+        $time = $date[1];
+        $date = explode('-', $date);
+        $_date = $date[2] . "/" . $date[1];
+        $_time = explode(':', $time);
+        $_time = $_time[0] . ":" . $_time[1];
+        return $_date . " " . $_time;
+    }
+
     public static function cpfRandom($mascara = "1") {
         $n1 = rand(0, 9);
         $n2 = rand(0, 9);
