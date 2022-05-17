@@ -251,7 +251,7 @@ class Helpers
       * @param    integer $key        Key to search and find within the array.
       * @return   integer
     */
-    function prefix_get_next_key_array( $arr, $key ) {
+    public static function prefix_get_next_key_array( $arr, $key ) {
 	    $keys = array_keys( $arr );
 	    $position = array_search( $key, $keys, true );
 
