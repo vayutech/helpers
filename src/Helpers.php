@@ -240,5 +240,26 @@ class Helpers
                 return "+{$m}'{$s}''";
         }
     }
+
+    #https://gist.github.com/mahdiyazdani/a57686e0f39cb98e24d1b4841a03342c
+
+    /**
+      * Retrieve the next key in an array from given key.
+      *
+      * @since    1.0.0
+      * @param    array   $arr        List of items in a form of array.
+      * @param    integer $key        Key to search and find within the array.
+      * @return   integer
+    */
+    function prefix_get_next_key_array( $arr, $key ) {
+	    $keys = array_keys( $arr );
+	    $position = array_search( $key, $keys, true );
+
+	    if ( isset( $keys[ $position + 1 ] ) ) {
+		    $next_key = $keys[ $position + 1 ];
+	    }
+
+	    return $next_key;
+    }
     
 }
