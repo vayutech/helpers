@@ -257,7 +257,8 @@ class Helpers
 
 	    if ( isset( $keys[ $position + 1 ] ) ) {
 		    $next_key = $keys[ $position + 1 ];
-	    }
+	    } else 
+            $next_key = $key;
 
 	    return $next_key;
     }
